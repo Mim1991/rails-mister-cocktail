@@ -1,0 +1,5 @@
+<%= @cocktail.name %>
+<%= @cocktail.doses %>
+
+<%= link_to "Back to List", cocktails_path  %>
+<%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail)  %>

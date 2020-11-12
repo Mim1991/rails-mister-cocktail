@@ -1,0 +1,28 @@
+.banner {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1529604278261-8bfcdb00a7b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+}
+
+#logo {
+	position: absolute;
+	top: 68%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	animation: fill 0.5s ease forwards 3.7s;
+}
+
+@keyframes line-anim {
+	to {
+    stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill{
+	from {
+		fill: transparent;
+	}
+	to{
+		fill: #FFFFFF;
+	}
+}

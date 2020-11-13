@@ -1,5 +1,15 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+    </ul>
+</div>
+
+<div class="container-form">
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
   <%= f.submit %>
 <% end %>
+</div>
  

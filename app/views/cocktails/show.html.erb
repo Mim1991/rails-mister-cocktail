@@ -1,10 +1,22 @@
-<%= @cocktail.name %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Back to List", root_path, class: "nav-link"%>
+      </li>
+    </ul>
+</div>
+
+
+<div class="container-form">
+<h1> <%= @cocktail.name %> </h1>
 <% @cocktail.doses.each do |dose| %> 
-  <%= dose.description %> 
-  <%= dose.ingredient.name %> 
+<p>  <%= dose.description %>  </p>
+<p>  <%= dose.ingredient.name %>  </p>
 <%= link_to "Remove", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
-<%= link_to "Back to List", root_path  %>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
@@ -14,3 +26,4 @@
 	<% end %>
 	<%= f.submit %>
 <% end %>
+</div>

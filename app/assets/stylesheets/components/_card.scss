@@ -1,5 +1,10 @@
 body {
   font-family: "Poppins", sans-serif;
+
+}
+
+.card img, h1, h2, h3  {
+   perspective: 500px;
 }
 
 .container-card {
@@ -94,7 +99,7 @@ button.active {
   width: 100vw;
   flex-wrap: wrap;
   justify-content: space-between;
-  perspective: 2000px;
+ 
 }
 
 a {

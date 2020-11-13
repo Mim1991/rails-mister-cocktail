@@ -11,21 +11,10 @@ require 'open-uri'
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user_serialized = open(url).read
 user = JSON.parse(user_serialized)
-ingredient0 = user["drinks"][0]["strIngredient1"]
-ingredient1 = user["drinks"][1]["strIngredient1"]
-ingredient2 = user["drinks"][2]["strIngredient1"]
-ingredient3 = user["drinks"][3]["strIngredient1"]
-ingredient4 = user["drinks"][4]["strIngredient1"]
-ingredient5 = user["drinks"][5]["strIngredient1"]
-ingredient6 = user["drinks"][6]["strIngredient1"]
-ingredient7 = user["drinks"][7]["strIngredient1"]
-ingredient8 = user["drinks"][8]["strIngredient1"]
 
-Ingredient.create(name: ingredient1)
-Ingredient.create(name: ingredient2)
-Ingredient.create(name: ingredient3)
-Ingredient.create(name: ingredient4)
-Ingredient.create(name: ingredient5)
-Ingredient.create(name: ingredient6)
-Ingredient.create(name: ingredient7)
-Ingredient.create(name: ingredient8)
+ingredients['drinks'].each do |ingredient|
+	Ingredient.create(name: ingredient['strIngredient1'])
+end
+Ingredient.create(name: "Egg White")
+
+puts "Finished"

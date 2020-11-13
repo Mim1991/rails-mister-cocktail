@@ -18,8 +18,11 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 import { initLogoLoad } from '../components/banner';
+import { cardAnimation } from '../components/card';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initLogoLoad();
+  cardAnimation();
 });

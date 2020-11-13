@@ -27,15 +27,34 @@
     </ul>
 </div>
 
+<div class="container">
+<% @cocktails.each do |cocktail| %>
+<div class="container-card">
+        <div class="card">
+            <div class="cocktail">
+                <div class="circle"></div>
+                <img src="https://cocktailpartyapp.com/wp-content/uploads/Singapore-Sling.png" alt="cocktail">
+            </div>
+            <div class="info">
+                <h1 class="title"><%= cocktail.name %></h1>
+                <h3>Tasty</h3>
+                <div class="view">
+                    <button><%= link_to "View Cocktail", cocktail_path(cocktail) %></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
 
-<div class="cocktail-cards">
+<!-- <div class="cocktail-cards">
 	<p>
 		<% @cocktails.each do |cocktail| %>
 		  <%= link_to cocktail.name, cocktail_path(cocktail)  %>
 		<% end %>
 	</p>
 </div>
-
+ -->
 
 
 
